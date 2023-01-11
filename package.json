@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./Accueil/sass/accueil.scss:./Accueil/sass/css/accueil.css --style compressed",
+    "sass": "sass --watch ./Accueil/sass/accueil.scss:./Accueil/sass/accueil.css --style compressed",
     "prefix": "postcss ./Accueil/sass/accueil.css --use autoprefixer -d./Accueil/sass/css/prefixed/"
   },
   "author": "",

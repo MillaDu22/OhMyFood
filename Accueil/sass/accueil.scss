@@ -16,17 +16,17 @@
 @import"./Thèmes/été";
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 * {
-    border:1px solid red;
+   /* border:1px solid red;*/
 }
 @media screen and (max-width: 768px) {
 
     body {
         width:375px;
-        height:2263px;
+        /*height:2263px;*/
         margin:0px;
     }
-
     header {
         position:relative;
         display:flex;
@@ -36,10 +36,10 @@
         top:0px;
     }
         .logotitle {
-            width:100%;
+            width:99.5%;
             height:63px;
             background:$colour-white;
-            box-shadow: 0px 2px 4px rgba(0 ,0 ,0 , 0.15)
+            box-shadow: 0px 2px 4px rgba(0 ,0 ,0 , 0.15);
         }
         h1 {
             position: relative;
@@ -57,10 +57,17 @@
             }
         form {
             position:relative;
-            width:100%;
+            width:98%;
             height:50px;
             top:0px;
             left:0px;
+        }
+        .fa-location-dot {
+            position:relative;
+            z-index: 2;
+            top:20px;
+            left:120px;
+            color:$colour-footer;
         }
         .localisation {
             position:relative;
@@ -68,7 +75,7 @@
             flex-direction:row;
             width:100%;
             height:50px;
-            top:0px;
+            top:-16px;
             left:0px;
             background:$colour-localbar;
             font-family:$familytext;
@@ -77,8 +84,11 @@
             line-height: 19px;
             color:$colour-footer;
             text-align: center;
+            border:none;
+            z-index: 1;
         }
         .réservations {
+            box-sizing: border-box;
             position:relative;
             top: 0px;
             display:flex;
@@ -131,8 +141,9 @@
         border-radius: 25px;
         top:27px;
         left:82px;
-        padding-top:13px;
-        padding-left:18.75px
+        padding-top:15px;
+        padding-left:20.75px;
+        border:none;
     }
     .h2fonct {
         position:relative;
@@ -173,15 +184,23 @@
     .fa-circle{
         position:relative;
         left:-8px;
-        top:46px;
+        top:48px;
         z-index: 1;
-        font-size: 14px;
+        font-size: 22px;
         color:$colour-primary;
     }
-    .fa-1, .fa-2, .fa-3 {
+    .fa-1, .fa-2 {
         position:relative;
         left:-25px;
-        top:45px;
+        top:44px;
+        z-index: 2;
+        color:$colour-white;
+        font-size:11px;
+    }
+    .fa-3 {
+        position:relative;
+        left:-27px;
+        top:44px;
         z-index: 2;
         color:$colour-white;
         font-size:11px;
@@ -190,12 +209,13 @@
         display:flex;
         flex-direction: row;
         position:relative;
-        width:322.49px;
+        width:320.49px;
         height:72.38px;
         background:$colour-lightgrey;
-        box-shadow:0px 4px 15px rgba (0, 0, 0, 0.15);
+        box-shadow:0px 4px 15px rgba(0, 0, 0, 0.15);
         border-radius:20px;
         padding-top:29.6px;
+        border:none;
     }
     .iconphone, .iconlist, .iconstore {
         position: relative;
@@ -227,27 +247,30 @@
             color:$colour-primary;
         }
     }
-.restautants {
+.restaurants {
     display:flex;
     flex-direction: column;
     width:100%;
-    background:$colour-localbar;
+    height:1170px;
+    background:$colour-lightgrey;
 }
 .columnCard {
     width:92%;
-    height:1150px;
+    height:1060px;
     position: relative;
+    top:0px;
     left:17.04px;
     bottom:44px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content:space-between;
 }
+
 .titreresto {
     width:275px;
     position:relative;
     left:20px;
-    top:0px;
+    top:10px;
     font-family: $familytext;
     font-size:24px;
     line-height:28px;
@@ -269,13 +292,14 @@
     .img1, .img2, .img3, .img4 {
     position:relative;
     left:0px;
-    width:100%;
+    width:340.91px;
     height:231px;
     bottom:60px;
 }
 .img2{
     object-fit:cover;
 }
+
 .description {
     display:flex;
     flex-direction: column;
@@ -286,6 +310,7 @@
 .titleCard {
     position:relative;
     left:12.81px;
+    top:5px;
     width:50%;
     height:20px;
     font-family: $familytext;
@@ -297,30 +322,43 @@
     position:relative;
     width:50%;
     height:24px;
-    top:-55px;
+    top:-45px;
     left:12.81px;
     font-family: $familytext;
     font-weight:300;
     font-size:17px;
     line-height:19.92px;
+    color:$colour-footer;
 
 }
 .iconlike {
     width:22px;
     height:21px;
     font-size: 21px;
-    color:grey;
     position:relative;
     right: -300px;
-    top:-35px;
+    top:-20px;
 }
+.fa-heart:before{
+    font-style:normal;
+    color:$colour-footer;
+    background: white;
+    transition:color 1.5s ease-in-out;
+}
+.fa-heart:hover::before{
+    font-weight: bold;
+    color:rgb(213, 112, 244);
+    cursor:pointer;
+}
+
     footer {
         display:flex;
         flex-direction: column;
         position: relative;
         top:0px;
-        width:100%;
-        height:197px;
+        width:100.5%;
+        box-sizing: border-box;
+        height:206px;
         color:$colour-white;
         background: $colour-footer;
     }
@@ -384,4 +422,443 @@
             top:0px;
         }
     }
+
+    @media screen and (min-width: 769px) {
+        body {
+            width:1440px;
+            /*height:1218px;*/
+            margin:0px;
+        }
+        body {
+            width:375px;
+            /*height:2263px;*/
+            margin:0px;
+        }
+        .rowloader {
+            display:flex;
+            flex-direction:row;
+            position:relative;
+            height:80px;
+            width:1440px;
+            margin:0px;
+        }
+        .loader {
+            position: relative;
+            width: 80px;
+            height: 80px;
+            top:0px;
+            right:0px;
+            bottom:0px;
+            left:400px;
+            }
+            
+            .loader div {
+            position: absolute;
+            border: 2px double rgb(213, 112, 244);;
+            opacity: 1;
+            border-radius: 50%;
+            animation: loader 2s cubic-bezier(0, 0.2, 0.8, 1) forwards;
+            }
+            .loader div:nth-child(2) {
+            animation-delay: -0.5s;
+            }
+            @keyframes loader {
+            0% {
+                top: 18px;
+                left: 18px;
+                width: 0;
+                height: 0;
+                opacity: 0;
+            }
+            4% {
+                top: 36px;
+                left: 36px;
+                width: 0;
+                height: 0;
+                opacity: 0;
+            }
+            5% {
+                top: 36px;
+                left: 36px;
+                width: 0;
+                height: 0;
+                opacity: 1;
+            }
+            100% {
+                top: 0px;
+                left: 0px;
+                width: 72px;
+                height: 72px;
+                opacity: 0;
+            }
+        }
+        header {
+            height:406px;
+            width:1440px;
+        }
+        .logotitle{
+            height:96px;
+            width:100%;
+            background:$colour-white;
+            box-shadow: 0px 2px 4px rgba(0 ,0 ,0 , 0.15);
+        }
+        h1 {
+            position:relative;
+            width:200px;
+            height:54px;
+            font-family: $familylogotitre;
+            font-weight: 400;
+            color:$colour-texth1h2;
+            font-size: 37px;
+            line-height: 54px;
+            left:43.06%;
+
+        }
+        form{
+            width:100%;
+            height:50px;
+            background-color: $colour-localbar;
+            text-align: center;
+        }
+        input, .fa-location-dot {
+            position:relative;
+            top:16px;
+            background:$colour-localbar ;
+            font-size: 16px;
+            line-height: 18.75px;
+            border:none;
+        }
+        .réservations {
+            height:260px;
+            width:100%;
+            background:$colour-lightgrey;
+        }
+        .h2résa {
+            position:relative;
+            width:645px;
+            height:47px;
+            left:398px;
+            font-family: $familytext;
+            font-size: 40px;
+            font-weight: 700;
+            color:$colour-black;
+        }
+        .résaP{
+            position:relative;
+            width:535px;
+            height:46px;
+            left:454px;
+            font-family: $familytext;
+            font-size: 18px;
+            font-weight: 300;
+            line-height:21px;
+            color:$colour-black;
+        }
+        .btnexplore{
+                position:relative;
+                display:flex;
+                height:50px;
+                width:218px;
+                background:$colour-fondpurple;
+                color:$colour-white;
+                font-size:16px;
+                font-family:$familytext;
+                font-weight:500;
+                line-height:19px;
+                text-align:center;
+                box-shadow:0px 4px 10px rgba(0, 0, 0, 0.25);
+                border-radius: 25px;
+                top:27px;
+                left:598px;
+                padding-top:15px;
+                padding-left:20.75px;
+                border:none;
+            
+        }        
+        .fonctionnement {
+            height:262px;
+            width:1440px;
+            font-family: $familytext;
+            font-size: 24px;
+            line-height:28.13px;
+            color:$colour-black;
+            font-weight: 700px;
+            background: $colour-white;
+        }
+        .h2fonct{
+            position:relative;
+            left:185px;
+            top:28px;
+            width:275px;
+            height:31px;
+            font-size:24px;
+            font-weight:700;
+            line-height: 28px;
+            color:$colour-black;
+            font-family: $familytext;
+        }
+        .listButton {
+            position: relative;
+            height: 72.38px;
+            width:80%;
+            display:flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            left:150px;
+            top:28px;
+        }
+        .rowbutton{
+            height:72.38px;
+            position:relative;
+            top:0px;
+            display:flex;
+            flex-direction: row;
+        }
+        .fa-circle{
+            position:relative;
+            left:-8px;
+            top:22px;
+            z-index: 1;
+            font-size: 22px;
+            color:$colour-primary;
+        }
+        .fa-1, .fa-2 {
+            position:relative;
+            left:-30px;
+            top:18px;
+            z-index: 2;
+            color:$colour-white;
+            font-size:11px;
+        }
+        .fa-3 {
+            position:relative;
+            left:-31px;
+            top:19px;
+            z-index: 2;
+            color:$colour-white;
+            font-size:11px;
+        }
+        .btnresto, .btnmenu, .btnmiam{
+            display:flex;
+            flex-direction: row;
+            position:relative;
+            width:322.49px;
+            height:72.38px;
+            background:$colour-lightgrey;
+            box-shadow:0px 4px 15px rgba(0, 0, 0, 0.15);
+            border-radius:20px;
+            padding-top:29.6px;
+            border:none;
+            top:-29px;
+        }
+        .iconphone, .iconlist, .iconstore {
+            position: relative;
+            right:36px;
+            left:35.49px;
+            color:#7E7E7E;
+            }
+            .iconphone{
+            font-size: 20px;
+            }
+            .iconlist{
+                font-size:16px;
+            }
+            .iconstore{
+                font-size: 18px;
+            }
+            .txtbtn{
+                position: relative;
+                left:53.49px;
+                font-family: $familytext;
+                color:$colour-black;
+                font-weight: 500;
+                line-height: 19px;
+                font-size: 16px;
+            }
+        .btnresto:hover, .btnmenu:hover, .btnmiam:hover{
+            background-color: #F5EDFF;
+            .iconphone, .iconlist, .iconstore {
+                color:$colour-primary;
+            }
+        }
+        
+        .restaurants{
+            height:436px;
+            width:1440px;
+            background-color: $colour-lightgrey;
+            overflow: hidden;
+        }
+        .titreresto {
+            position: relative;
+            top:23px;
+            left:185px;
+            height:28px;
+            width:131px;
+            font-family: $familytext;
+            font-size: 24px;
+            font-weight:700;
+            line-height: 28px;
+            color:black;
+        }
+        .columnCard {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width:1440px;
+            position:relative;
+            left:185px;
+            top:47px;
+        }
+        .resto1, .resto2, .resto3, .resto4 {
+            position:relative;
+            left:17.04;
+            display:flex;
+            flex-direction:column;
+            width:340px;
+            height:251px;
+            background:$colour-white;
+            box-shadow:0px 4px 15px rgba(0, 0, 0, 0.1);
+            border-radius:15px;
+            overflow: hidden;
+        }
+            .img1, .img2, .img3, .img4 {
+            position:relative;
+            left:0px;
+            width:100%;
+            height:231px;
+            bottom:60px;
+        }
+        .img2{
+            object-fit:cover;
+        }
+        
+        .description {
+            display:flex;
+            flex-direction: column;
+            width:100%;
+            position:relative;
+            top:-70px;
+        }
+        .titleCard {
+            position:relative;
+            left:12.81px;
+            top:5px;
+            width:50%;
+            height:20px;
+            font-family: $familytext;
+            font-weight:700;
+            font-size:18px;
+            line-height:21.09px;
+        }
+        .txtCard {
+            position:relative;
+            width:50%;
+            height:24px;
+            top:-45px;
+            left:12.81px;
+            font-family: $familytext;
+            font-weight:300;
+            font-size:17px;
+            line-height:19.92px;
+            color:$colour-footer;
+        
+        }
+        .iconlike {
+            width:22px;
+            height:21px;
+            font-size: 21px;
+            position:relative;
+            right: -300px;
+            top:-20px;
+        }
+        .fa-heart:before{
+            font-style:normal;
+            color:$colour-footer;
+            background: white;
+            transition:color 1.5s ease-in-out;
+        }
+        .fa-heart:hover::before{
+            font-weight:bold;
+            color:rgb(213, 112, 244);
+            cursor:pointer;
+        }
+        footer {
+            display:flex;
+            flex-direction: row-reverse;
+            justify-content:flex-end;
+            height:114px;
+            width:1440px;
+            background: $colour-footer;
+            overflow: hidden;
+
+        }
+        article {
+            height:20px;
+            width:1100px;
+            height:114px;
+            display: flex;
+            flex-direction: row;
+            position:relative;
+            left:511px;
+        }
+        .rowfooter {
+            height:18px;
+            display:flex;
+            flex-direction: row;
+            position:relative;
+            top:49px;
+
+        }
+        .contact, .mention, .txtoficon {
+            position:relative;
+            height:19px;
+            font-family: $familytext;
+            font-weight: 400;
+            font-size:16px;
+            line-height:19px ;
+            color:$colour-white;
+        }
+
+        .contact {
+            width:56px;
+            top:49px;
+            left:10px;
+        }
+        .mention{
+            width:122px;
+            top:49px;
+            left:-35px;
+        
+        }
+        .txtoficon {
+            width:208px;
+        }
+        .logofooter{
+            height:27px;
+            width:137.58px;
+            position:relative;
+            left:105px;
+            top:29px;
+            color:$colour-white;
+            font-family: $familylogotitre;
+            font-size: 18px;
+            font-weight:400;
+            line-height: 26.24px;
+        }
+        .iconhandshake, .iconutensils {
+            width:11px;
+            height:13px;
+            font-size:13px;
+            color:$colour-white;
+            position:relative;
+            right:11px;
+        }
+
+    }
+
+
+    /*----------------------------------------------------------------------*/
+    /*Pages menus*/
+    /*----------------------------------------------------------------------*/
+
 

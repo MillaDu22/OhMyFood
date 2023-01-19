@@ -130,6 +130,11 @@
     padding-left: 20.75px;
     border: none;
   }
+  .btnexplore:active {
+    background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+    filter: brightness(1.1);
+    box-shadow: 2px 6px 10px rgba(0, 0, 1, 0.25);
+  }
   .h2fonct {
     position: relative;
     width: 275px;
@@ -225,10 +230,11 @@
     line-height: 19px;
     font-size: 16px;
   }
-  .btnresto:hover, .btnmenu:hover, .btnmiam:hover {
+  .btnresto:active, .btnmenu:active, .btnmiam:active {
+    box-shadow: 2px 6px 15px rgba(0, 0, 2, 0.15);
     background-color: #F5EDFF;
   }
-  .btnresto:hover .iconphone, .btnresto:hover .iconlist, .btnresto:hover .iconstore, .btnmenu:hover .iconphone, .btnmenu:hover .iconlist, .btnmenu:hover .iconstore, .btnmiam:hover .iconphone, .btnmiam:hover .iconlist, .btnmiam:hover .iconstore {
+  .btnresto:active .iconphone, .btnresto:active .iconlist, .btnresto:active .iconstore, .btnmenu:active .iconphone, .btnmenu:active .iconlist, .btnmenu:active .iconstore, .btnmiam:active .iconphone, .btnmiam:active .iconlist, .btnmiam:active .iconstore {
     color: #9356DC;
   }
   .restaurants {
@@ -320,16 +326,31 @@
     right: -300px;
     top: -20px;
   }
-  .fa-heart:before {
-    font-style: normal;
-    color: #353535;
-    background: white;
-    transition: color 1.5s ease-in-out;
+  .hearth2 {
+    position: relative;
+    top: -27;
+    left: 13px;
+    width: 22px;
+    height: 21px;
   }
-  .fa-heart:hover::before {
-    font-weight: bold;
-    color: rgb(213, 112, 244);
+  .fa-regular.fa-heart {
+    position: relative;
+    font-size: 22px;
+    left: 0px;
+  }
+  .fa-solid.fa-heart:before {
+    font-style: normal;
+    color: transparent;
+    transition: color 1s ease-in-out;
+  }
+  .fa-solid:active::before {
+    color: rgb(203, 60, 242);
     cursor: pointer;
+  }
+  .fa-solid.fa-heart {
+    position: relative;
+    top: -24px;
+    font-size: 22px;
   }
   footer {
     display: flex;
@@ -422,27 +443,40 @@
     margin: 0px;
   }
   .loader {
-    position: relative;
-    width: 80px;
-    height: 80px;
+    position: fixed;
+    background: #FFFFFF;
+    opacity: 0.8;
+    inset: 0;
+    z-index: 2;
+    width: 1440px;
+    height: 100vh;
     top: 0px;
     right: 0px;
     bottom: 0px;
-    left: 400px;
+    left: 0px;
+    -webkit-animation: loader 1s 2s forwards;
+            animation: loader 1s 2s forwards;
   }
-  .loader div {
+  .load {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    left: 665px;
+    top: 50vh;
+  }
+  .load div {
     position: absolute;
-    border: 2px double rgb(213, 112, 244);
+    border: 4px solid rgb(213, 112, 244);
     opacity: 1;
     border-radius: 50%;
-    -webkit-animation: loader 2s cubic-bezier(0, 0.2, 0.8, 1) forwards;
-            animation: loader 2s cubic-bezier(0, 0.2, 0.8, 1) forwards;
+    -webkit-animation: load 2.5s cubic-bezier(0, 0.2, 0.8, 1) forwards;
+            animation: load 2.5s cubic-bezier(0, 0.2, 0.8, 1) forwards;
   }
-  .loader div:nth-child(2) {
+  .load div:nth-child(2) {
     -webkit-animation-delay: -0.5s;
             animation-delay: -0.5s;
   }
-  @-webkit-keyframes loader {
+  @-webkit-keyframes load {
     0% {
       top: 18px;
       left: 18px;
@@ -470,36 +504,52 @@
       width: 72px;
       height: 72px;
       opacity: 0;
+    }
+  }
+  @keyframes load {
+    0% {
+      top: 18px;
+      left: 18px;
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+    4% {
+      top: 36px;
+      left: 36px;
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+    5% {
+      top: 36px;
+      left: 36px;
+      width: 0;
+      height: 0;
+      opacity: 1;
+    }
+    100% {
+      top: 0px;
+      left: 0px;
+      width: 72px;
+      height: 72px;
+      opacity: 0;
+    }
+  }
+  @-webkit-keyframes loader {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
     }
   }
   @keyframes loader {
     0% {
-      top: 18px;
-      left: 18px;
-      width: 0;
-      height: 0;
-      opacity: 0;
-    }
-    4% {
-      top: 36px;
-      left: 36px;
-      width: 0;
-      height: 0;
-      opacity: 0;
-    }
-    5% {
-      top: 36px;
-      left: 36px;
-      width: 0;
-      height: 0;
-      opacity: 1;
+      transform: scale(1);
     }
     100% {
-      top: 0px;
-      left: 0px;
-      width: 72px;
-      height: 72px;
-      opacity: 0;
+      transform: scale(0);
     }
   }
   header {
@@ -583,6 +633,11 @@
     padding-left: 20.75px;
     border: none;
   }
+  .btnexplore:hover {
+    background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+    filter: brightness(1.1);
+    box-shadow: 2px 6px 10px rgba(0, 0, 1, 0.25);
+  }
   .fonctionnement {
     height: 262px;
     width: 1440px;
@@ -632,7 +687,7 @@
   }
   .fa-1, .fa-2 {
     position: relative;
-    left: -30px;
+    left: -28px;
     top: 18px;
     z-index: 2;
     color: #FFFFFF;
@@ -640,8 +695,8 @@
   }
   .fa-3 {
     position: relative;
-    left: -31px;
-    top: 19px;
+    left: -30px;
+    top: 18px;
     z-index: 2;
     color: #FFFFFF;
     font-size: 11px;
@@ -684,6 +739,7 @@
     font-size: 16px;
   }
   .btnresto:hover, .btnmenu:hover, .btnmiam:hover {
+    box-shadow: 4px 8px 15px rgba(0, 0, 1, 0.15);
     background-color: #F5EDFF;
   }
   .btnresto:hover .iconphone, .btnresto:hover .iconlist, .btnresto:hover .iconstore, .btnmenu:hover .iconphone, .btnmenu:hover .iconlist, .btnmenu:hover .iconstore, .btnmiam:hover .iconphone, .btnmiam:hover .iconlist, .btnmiam:hover .iconstore {
@@ -777,16 +833,32 @@
     right: -300px;
     top: -20px;
   }
-  .fa-heart:before {
-    font-style: normal;
-    color: #353535;
-    background: white;
-    transition: color 1.5s ease-in-out;
+  .hearth2 {
+    position: relative;
+    top: -27;
+    left: 13px;
+    width: 22px;
+    height: 21px;
   }
-  .fa-heart:hover::before {
-    font-weight: bold;
-    color: rgb(213, 112, 244);
+  .fa-regular.fa-heart {
+    position: relative;
+    font-size: 22px;
+    left: 0px;
+  }
+  .fa-solid.fa-heart:before {
+    font-style: normal;
+    color: transparent;
+    transition: color 1s ease-in-out;
+  }
+  .fa-solid:hover::before {
+    color: rgb(203, 60, 242);
     cursor: pointer;
+  }
+  .fa-solid.fa-heart {
+    position: relative;
+    font-size: 22px;
+    top: -24px;
+    left: 0px;
   }
   footer {
     display: flex;

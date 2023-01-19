@@ -112,16 +112,18 @@
     font-size: 22px;
     left: 0px;
   }
-  .fa-heart:before {
+  .fa-solid.fa-heart:before {
     font-style: normal;
-    color: #353535;
-    background: white;
-    transition: color 1.5s ease-in-out;
+    color: transparent;
+    transition: color 1s ease-in-out;
   }
-  .fa-heart:hover::before {
-    font-weight: bold;
-    color: rgb(213, 112, 244);
+  .fa-solid.fa-heart:active::before {
+    color: rgb(203, 60, 242);
     cursor: pointer;
+  }
+  .fa-solid.fa-heart {
+    position: relative;
+    top: -23px;
   }
   .decotitre {
     position: relative;
@@ -161,6 +163,73 @@
     padding: 12px 5px 12px 5px;
     list-style: none;
     left: -30px;
+    /*overflow: hidden;*/
+  }
+  .lientrées {
+    -webkit-animation: lancement 1s ease-in-out forwards;
+            animation: lancement 1s ease-in-out forwards;
+  }
+  .liplats {
+    -webkit-animation: lancement 1.5s ease-in-out forwards;
+            animation: lancement 1.5s ease-in-out forwards;
+  }
+  .lidesserts {
+    -webkit-animation: lancement 2s ease-in-out forwards;
+            animation: lancement 2s ease-in-out forwards;
+  }
+  @-webkit-keyframes lancement {
+    0% {
+      transform: translateY(50%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+  @keyframes lancement {
+    0% {
+      transform: translateY(50%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+  .boxcheck {
+    position: relative;
+    top: -43px;
+    left: 62px;
+    width: 59px;
+    height: 70px;
+    background: #99E2D0;
+    border-radius: 0 15px 15px 0;
+    -webkit-animation: box 1s linear forwards;
+            animation: box 1s linear forwards;
+  }
+  .fa-solid.fa-circle-check {
+    position: relative;
+    left: 17px;
+    top: 25px;
+    color: #FFFFFF;
+    font-size: 20px;
+  }
+  @-webkit-keyframes box {
+    0% {
+      left: 62px;
+    }
+    100% {
+      left: 5px;
+    }
+  }
+  @keyframes box {
+    0% {
+      left: 62px;
+    }
+    100% {
+      left: 5px;
+    }
   }
   .titreentrées, .titreplats, .titredesserts {
     position: relative;
@@ -238,6 +307,11 @@
     padding-top: 13px;
     padding-left: 48px;
     border: none;
+  }
+  .btncommand:active {
+    background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+    filter: brightness(1.1);
+    box-shadow: 2px 6px 15px rgba(0, 0, 2, 0.45);
   }
   footer {
     display: flex;
@@ -406,24 +480,27 @@
   .hearth2 {
     position: relative;
     top: -27;
+    left: 13px;
     width: 22px;
     height: 21px;
   }
   .fa-heart {
     position: relative;
     font-size: 22px;
-    left: 24px;
+    left: 0px;
   }
-  .fa-heart:before {
+  .fa-solid.fa-heart:before {
     font-style: normal;
-    color: #353535;
-    background: white;
-    transition: color 1.5s ease-in-out;
+    color: transparent;
+    transition: color 1s ease-in-out;
   }
-  .fa-heart:hover::before {
-    font-weight: bold;
-    color: rgb(213, 112, 244);
+  .fa-solid.fa-heart:hover::before {
+    color: rgb(203, 60, 242);
     cursor: pointer;
+  }
+  .fa-solid.fa-heart {
+    position: relative;
+    top: -23px;
   }
   .decotitre {
     position: relative;
@@ -465,6 +542,38 @@
     padding: 12px 5px 12px 5px;
     list-style: none;
     left: -40px;
+  }
+  .lientrées {
+    -webkit-animation: lancement 1s ease-in-out forwards;
+            animation: lancement 1s ease-in-out forwards;
+  }
+  .liplats {
+    -webkit-animation: lancement 1.5s ease-in-out forwards;
+            animation: lancement 1.5s ease-in-out forwards;
+  }
+  .lidesserts {
+    -webkit-animation: lancement 2s ease-in-out forwards;
+            animation: lancement 2s ease-in-out forwards;
+  }
+  @-webkit-keyframes lancement {
+    0% {
+      transform: translateY(50%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+  @keyframes lancement {
+    0% {
+      transform: translateY(50%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0%);
+      opacity: 1;
+    }
   }
   .titreentrées, .titreplats, .titredesserts {
     position: relative;
@@ -542,6 +651,11 @@
     padding-top: 13px;
     padding-left: 48px;
     border: none;
+  }
+  .btncommand:hover {
+    background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+    filter: brightness(1.1);
+    box-shadow: 2px 6px 15px rgba(0, 0, 2, 0.45);
   }
   footer {
     position: relative;

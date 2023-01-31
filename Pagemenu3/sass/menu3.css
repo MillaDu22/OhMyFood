@@ -102,7 +102,7 @@
   }
   .hearth2 {
     position: relative;
-    top: -27;
+    top: -27px;
     left: 13px;
     width: 22px;
     height: 21px;
@@ -115,7 +115,7 @@
   .fa-solid.fa-heart:before {
     font-style: normal;
     color: transparent;
-    transition: color 500ms ease-in-out backwards;
+    transition: color 500ms ease-in-out;
   }
   .fa-solid.fa-heart:active::before {
     color: rgb(203, 60, 242);
@@ -178,6 +178,7 @@
     padding: 12px 5px 12px 5px;
     list-style: none;
     left: -30px;
+    overflow: hidden;
   }
   .lientrées {
     -webkit-animation: lancement 1s ease-in-out forwards;
@@ -210,6 +211,53 @@
       transform: translateY(0%);
       opacity: 1;
     }
+  }
+  .boxcheck {
+    position: relative;
+    top: -43px;
+    left: 62px;
+    width: 59px;
+    height: 70px;
+    background: #99E2D0;
+    border-radius: 0 15px 15px 0;
+    transition: 0.8s ease-in-out;
+  }
+  .fa-solid.fa-circle-check {
+    position: relative;
+    left: 17px;
+    top: 25px;
+    color: #FFFFFF;
+    font-size: 20px;
+    -webkit-animation: spin 0.8s ease-in-out;
+            animation: spin 0.8s ease-in-out;
+  }
+  @-webkit-keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  .lientrées:active .boxcheck, .liplats:active .boxcheck, .lidesserts:active .boxcheck {
+    left: 5px;
+  }
+  .lientrées:active .tarif, .liplats:active .tarif, .lidesserts:active .tarif {
+    left: 5px;
   }
   .titreentrées, .titreplats, .titredesserts {
     position: relative;
@@ -262,10 +310,10 @@
     font-family: "Roboto";
     font-size: 15px;
     line-height: 18px;
-    font-weight: 700px;
+    font-weight: 700;
     color: #101010;
     position: relative;
-    left: 10px;
+    left: 40px;
     top: -5px;
   }
   .btncommand {
@@ -308,7 +356,7 @@
     height: 27px;
     position: relative;
     font-family: "Shrikhand";
-    font-weight: 400px;
+    font-weight: 400;
     font-size: 18px;
     line-height: 26px;
     top: 0px;
@@ -328,7 +376,7 @@
     font-size: 16px;
   }
   .iconhandshake {
-    rotate: 135deg;
+    transform: rotate(135deg);
     font-size: 13px;
   }
   .rowfooter {
@@ -342,12 +390,13 @@
   }
   .txtoficon {
     position: relative;
+    top: -35px;
     left: 10.08px;
     height: 19px;
     width: 80%;
     font-family: "Roboto";
     font-size: 16px;
-    font-weight: 500px;
+    font-weight: 500;
     line-height: 19px;
   }
   .mention, .contact {
@@ -357,10 +406,13 @@
     color: #FFFFFF;
     font-family: "Roboto";
     font-size: 16px;
-    font-weight: 500px;
+    font-weight: 500;
     line-height: 19px;
     left: 25px;
-    top: 0px;
+    top: -35px;
+  }
+  .contact {
+    top: -110px;
   }
 }
 @media screen and (min-width: 769px) {
@@ -459,7 +511,7 @@
   }
   .hearth2 {
     position: relative;
-    top: -27;
+    top: 0px;
     left: 0px;
     width: 22px;
     height: 21px;
@@ -472,7 +524,7 @@
   .fa-solid.fa-heart:before {
     font-style: normal;
     color: transparent;
-    transition: color 1s ease-in-out;
+    transition: color 500ms ease-in-out;
   }
   .fa-solid.fa-heart:hover::before {
     color: rgb(203, 60, 242);
@@ -539,6 +591,7 @@
     padding: 12px 5px 12px 5px;
     list-style: none;
     left: -40px;
+    overflow: hidden;
   }
   .lientrées {
     -webkit-animation: lancement 1s ease-in-out forwards;
@@ -570,6 +623,59 @@
     100% {
       transform: translateY(0%);
       opacity: 1;
+    }
+  }
+  .boxcheck {
+    position: relative;
+    top: -43px;
+    left: 104px;
+    width: 59px;
+    height: 70px;
+    background: #99E2D0;
+    border-radius: 0 15px 15px 0;
+    -webkit-animation: box 0.8s ease-in-out;
+            animation: box 0.8s ease-in-out;
+  }
+  .fa-solid.fa-circle-check {
+    position: relative;
+    left: 17px;
+    top: 25px;
+    color: #FFFFFF;
+    font-size: 20px;
+    -webkit-animation: spin 0.8s ease-in-out;
+            animation: spin 0.8s ease-in-out;
+  }
+  .lientrées:hover, .liplats:hover, .lidesserts:hover {
+    /*.fa-solid.fa-circle-check {
+    animation: spin 0.8s ease-in-out;
+    }*/
+  }
+  .lientrées:hover .boxcheck, .liplats:hover .boxcheck, .lidesserts:hover .boxcheck {
+    left: 44px;
+  }
+  .lientrées:hover .tarif, .liplats:hover .tarif, .lidesserts:hover .tarif {
+    left: 20px;
+  }
+  @-webkit-keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(360deg);
     }
   }
   .titreentrées, .titreplats, .titredesserts {
@@ -661,6 +767,7 @@
     flex-direction: row-reverse;
     justify-content: flex-end;
     height: 114px;
+    width: 1440px;
     background: #353535;
     overflow: hidden;
   }
@@ -671,7 +778,7 @@
     display: flex;
     flex-direction: row;
     position: relative;
-    left: 511px;
+    left: 305px;
   }
   .rowfooter {
     height: 18px;
@@ -691,22 +798,23 @@
   }
   .contact {
     width: 56px;
-    top: 49px;
+    top: 12px;
     left: 10px;
   }
   .mention {
     width: 122px;
-    top: 49px;
+    top: 12px;
     left: -35px;
   }
   .txtoficon {
     width: 208px;
+    top: -39px;
   }
   .logofooter {
     height: 27px;
     width: 137.58px;
     position: relative;
-    left: 105px;
+    left: -105px;
     top: 29px;
     color: #FFFFFF;
     font-family: "Shrikhand";
@@ -721,5 +829,8 @@
     color: #FFFFFF;
     position: relative;
     right: 11px;
+  }
+  .iconhandshake {
+    transform: rotate(135deg);
   }
 }/*# sourceMappingURL=menu3.css.map */

@@ -18,7 +18,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 * {
- /* border:1px solid red;*/
+  /*border:1px solid red;*/
 }
 @media screen and (max-width: 768px) {
 
@@ -155,7 +155,7 @@
         width:275px;
         height:31px;
         left:20px;
-        top:48px;
+        top:28px;
         font-family: $familytext;
         font-weight:700;
         font-size:24px;
@@ -261,7 +261,7 @@
     background:$colour-lightgrey;
 }
 .columnCard {
-    width:92%;
+    width:340px;
     height:1060px;
     position: relative;
     top:0px;
@@ -285,10 +285,10 @@
 }
 .resto1, .resto2, .resto3, .resto4 {
     position:relative;
-    left:17.04;
+    left:0px;
     display:flex;
     flex-direction:column;
-    width:100%;
+    width:340px;
     height:251px;
     background:$colour-white;
     box-shadow:0px 4px 15px rgba(0, 0, 0, 0.1);
@@ -305,6 +305,22 @@
 .img2{
     object-fit:cover;
 }
+.new {
+    position:absolute;
+    left:246.31px;
+    top:14.6px;
+    width:75.37px;
+    height:16px;
+    background:$colour-tertiary;
+    color:#008766;
+    font-family: $familytext;
+    font-size: 14px;
+    font-weight:500;
+    line-height: 16px;
+    text-align: center;
+    border-radius:2px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+}
 
 .description {
     display:flex;
@@ -316,7 +332,7 @@
 .titleCard {
     position:relative;
     left:12.81px;
-    top:5px;
+    top:10px;
     width:50%;
     height:20px;
     font-family: $familytext;
@@ -328,7 +344,7 @@
     position:relative;
     width:50%;
     height:24px;
-    top:-45px;
+    top:-5px;
     left:12.81px;
     font-family: $familytext;
     font-weight:300;
@@ -343,11 +359,11 @@
     font-size: 21px;
     position:relative;
     right: -300px;
-    top:-20px;
+    top:-0px;
 }
 .hearth2{
     position:relative;
-    top:-27;
+    top:-27px;
     left:13px;
     width:22px;
     height:21px;
@@ -390,13 +406,13 @@
             height:27px;
             position:relative;
             font-family:$familylogotitre;
-            font-weight:400px;
+            font-weight:400;
             font-size:18px;
             line-height:26px;
             top:0px;
             left:25px;
         }
-        article {
+        .article {
             display:flex;
             flex-direction: column;
             justify-content: space-between;
@@ -410,7 +426,7 @@
             font-size:16px;
         }
         .iconhandshake {
-            rotate: 135deg;
+            transform:rotate(135deg);
             font-size: 13px;
         }
         .rowfooter {
@@ -424,12 +440,13 @@
         }
         .txtoficon {
             position: relative;
+            top:-35px;
             left:10.08px;
             height:19px;
             width:80%;
             font-family: $familytext;
             font-size: 16px;
-            font-weight: 500px;
+            font-weight: 500;
             line-height: 19px;
         }
         .mention, .contact {
@@ -439,10 +456,13 @@
             color:$colour-white;
             font-family: $familytext;
             font-size: 16px;
-            font-weight: 500px;
+            font-weight: 500;
             line-height: 19px;
             left:25px;
-            top:0px;
+            top:-35px;
+        }
+        .contact{
+            top:-110px;
         }
     }
 
@@ -450,11 +470,6 @@
         body {
             width:1440px;
             /*height:1218px;*/
-            margin:0px;
-        }
-        body {
-            width:375px;
-            /*height:2263px;*/
             margin:0px;
         }
         .rowloader {
@@ -467,7 +482,7 @@
         }
         .loader {
             position: fixed;
-            background:$colour-white;
+            background:$colour-lightgrey;
             opacity:0.8;
             inset:0;
             z-index: 2;
@@ -488,7 +503,10 @@
             }
             .load div {
                 position: absolute;
-                border: 4px solid rgb(213, 112, 244);
+                border-top: 3px solid purple;
+                border-bottom: 3px solid purple;
+                border-left: 1px solid $colour-black;
+                border-right: 1px solid $colour-black;
                 opacity: 1;
                 border-radius: 50%;
                 animation: load 2.5s cubic-bezier(0, 0.2, 0.8, 1) forwards;
@@ -541,7 +559,7 @@
         }
         .logotitle{
             height:96px;
-            width:100%;
+            width:1440px;
             background:$colour-white;
             box-shadow: 0px 2px 4px rgba(0 ,0 ,0 , 0.15);
         }
@@ -558,7 +576,7 @@
 
         }
         form{
-            width:100%;
+            width:1440px;
             height:50px;
             background-color: $colour-localbar;
             text-align: center;
@@ -573,7 +591,7 @@
         }
         .réservations {
             height:260px;
-            width:100%;
+            width:1440px;
             background:$colour-lightgrey;
         }
         .h2résa {
@@ -611,7 +629,7 @@
                 text-align:center;
                 box-shadow:0px 4px 10px rgba(0, 0, 0, 0.25);
                 border-radius: 25px;
-                top:27px;
+                top:15px;
                 left:598px;
                 padding-top:15px;
                 padding-left:20.75px;
@@ -624,18 +642,22 @@
             box-shadow:2px 6px 10px rgba(0, 0, 1, 0.25);
         }  
         .fonctionnement {
+            position:relative;
+            display:flex;
+            flex-direction: column;
+            margin:0px;
             height:262px;
             width:1440px;
             font-family: $familytext;
             font-size: 24px;
             line-height:28.13px;
             color:$colour-black;
-            font-weight: 700px;
+            font-weight: 700;
             background: $colour-white;
         }
         .h2fonct{
             position:relative;
-            left:185px;
+            left:25px;
             top:28px;
             width:275px;
             height:31px;
@@ -648,12 +670,12 @@
         .listButton {
             position: relative;
             height: 72.38px;
-            width:80%;
+            width:1250px;
             display:flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-            left:150px;
-            top:28px;
+            flex-direction:row;
+            justify-content: space-between;
+            left:32px;
+            top:48px;
         }
         .rowbutton{
             height:72.38px;
@@ -740,7 +762,7 @@
         .titreresto {
             position: relative;
             top:23px;
-            left:185px;
+            left:25px;
             height:28px;
             width:131px;
             font-family: $familytext;
@@ -752,15 +774,15 @@
         .columnCard {
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
+            justify-content: space-evenly;
             width:1440px;
             position:relative;
-            left:185px;
+            left:0px;
             top:47px;
         }
         .resto1, .resto2, .resto3, .resto4 {
             position:relative;
-            left:17.04;
+            left:0px;
             display:flex;
             flex-direction:column;
             width:340px;
@@ -770,6 +792,7 @@
             border-radius:15px;
             overflow: hidden;
         }
+
             .img1, .img2, .img3, .img4 {
             position:relative;
             left:0px;
@@ -779,6 +802,22 @@
         }
         .img2{
             object-fit:cover;
+        }
+        .new {
+            position:absolute;
+            left:246.31px;
+            top:14.6px;
+            width:75.37px;
+            height:16px;
+            background:$colour-tertiary;
+            color:#008766;
+            font-family: $familytext;
+            font-size: 14px;
+            font-weight:500;
+            line-height: 16px;
+            text-align: center;
+            border-radius:2px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
         }
         
         .description {
@@ -791,7 +830,7 @@
         .titleCard {
             position:relative;
             left:12.81px;
-            top:5px;
+            top:10px;
             width:50%;
             height:20px;
             font-family: $familytext;
@@ -803,7 +842,7 @@
             position:relative;
             width:50%;
             height:24px;
-            top:-45px;
+            top:-5px;
             left:12.81px;
             font-family: $familytext;
             font-weight:300;
@@ -818,11 +857,11 @@
             font-size: 21px;
             position:relative;
             right: -300px;
-            top:-20px;
+            top:0px;
         }
         .hearth2{
             position:relative;
-            top:-27;
+            top:-27px;
             left:13px;
             width:22px;
             height:21px;
@@ -858,14 +897,14 @@
             overflow: hidden;
 
         }
-        article {
+        .article {
             height:20px;
-            width:1100px;
+            width:900px;
             height:114px;
             display: flex;
             flex-direction: row;
             position:relative;
-            left:511px;
+            left:330px;
         }
         .rowfooter {
             height:18px;
@@ -887,23 +926,24 @@
 
         .contact {
             width:56px;
-            top:49px;
+            top:15px;
             left:10px;
         }
         .mention{
             width:122px;
-            top:49px;
+            top:15px;
             left:-35px;
         
         }
         .txtoficon {
             width:208px;
+            top:-35px;
         }
         .logofooter{
             height:27px;
             width:137.58px;
             position:relative;
-            left:105px;
+            left:100px;
             top:29px;
             color:$colour-white;
             font-family: $familylogotitre;
@@ -918,6 +958,10 @@
             color:$colour-white;
             position:relative;
             right:11px;
+            top:5px;
+        }
+        .iconhandshake{
+        transform:rotate(135deg);
         }
 
     }

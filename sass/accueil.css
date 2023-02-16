@@ -445,14 +445,14 @@ footer {
 
 @media screen and (min-width: 769px) {
   body {
-    width: 1440px;
+    width: 100%;
   }
   .rowloader {
     display: flex;
     flex-direction: row;
     position: relative;
-    height: 80px;
-    width: 1440px;
+    height: 100%;
+    width: 100%;
   }
   .loader {
     margin: 0 auto;
@@ -462,8 +462,8 @@ footer {
     opacity: 0.8;
     inset: 0;
     z-index: 2;
-    width: 1440px;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     top: 0px;
     right: 0px;
     bottom: 0px;
@@ -474,7 +474,7 @@ footer {
     width: 80px;
     height: 80px;
     position: relative;
-    left: 665px;
+    left: 50%;
     top: 50vh;
   }
   .load div {
@@ -529,23 +529,54 @@ footer {
     }
   }
   .fa-location-dot {
-    left: 630px;
+    left: 42%;
   }
   .btnexplore {
-    left: 45px;
+    left: 42%;
   }
   .btnexplore:hover {
     background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
     filter: brightness(1.1);
     box-shadow: 2px 6px 10px rgba(0, 0, 1, 0.25);
   }
+  .fonctionement {
+    width: 100%;
+    left: 0px;
+  }
+  .h2fonct {
+    width: 100%;
+    left: 0px;
+    text-align: center;
+  }
   .listButton {
     position: relative;
-    width: 1250px;
+    width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    left: 32px;
+    justify-content: space-around;
+    padding-bottom: 20px;
+    left: 0px;
+  }
+  .row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .btnresto, .btnmenu, .btnmiam {
+    width: 66%;
+    display: flex;
+    text-align: center;
+  }
+  .fa-circle {
+    top: 28px;
+    left: 20px;
+  }
+  .fa-3, .fa-2, .fa-1 {
+    top: 33px;
+    left: 4px;
+  }
+  .txtbtn {
+    width: 62%;
   }
   .btnresto:hover, .btnmenu:hover, .btnmiam:hover {
     box-shadow: 4px 8px 15px rgba(0, 0, 1, 0.15);
@@ -554,10 +585,20 @@ footer {
   .btnresto:hover .iconphone, .btnresto:hover .iconlist, .btnresto:hover .iconstore, .btnmenu:hover .iconphone, .btnmenu:hover .iconlist, .btnmenu:hover .iconstore, .btnmiam:hover .iconphone, .btnmiam:hover .iconlist, .btnmiam:hover .iconstore {
     color: #9356DC;
   }
+  .restaurants {
+    width: 100%;
+    overflow: scroll;
+  }
+  .titreresto {
+    width: 100%;
+    text-align: center;
+    left: 0px;
+  }
   .columnCard {
     flex-direction: row;
     justify-content: space-evenly;
-    width: 98.5%;
+    width: 110%;
+    left: 0.7%;
   }
   .resto1, .resto2, .resto3, .resto4 {
     width: 340px;
@@ -571,20 +612,28 @@ footer {
     color: rgb(203, 60, 242);
     cursor: pointer;
   }
+  .titleCard {
+    width: 90%;
+  }
+  .txtCard {
+    width: 90%;
+  }
   footer {
     flex-direction: row-reverse;
     justify-content: flex-end;
     width: 100%;
   }
   .article {
-    width: 900px;
+    width: 76%;
     display: flex;
     flex-direction: row;
-    left: 300px;
+    justify-content: space-between;
+    left: 0px;
+    padding-left: 3%;
   }
   .lienFooter {
     position: relative;
-    width: 208px;
+    width: 180px;
     top: 90px;
   }
   .rowfooter {
@@ -593,11 +642,11 @@ footer {
   }
   .contact {
     width: 208px;
-    left: -105px;
+    left: -15px;
   }
   .mention {
     width: 208px;
-    left: -25px;
+    left: 25px;
   }
   .txtoficon {
     width: 208px;
@@ -605,7 +654,6 @@ footer {
   }
   .logofooter {
     width: 90px;
-    left: 100px;
     top: 72px;
   }
 }/*# sourceMappingURL=accueil.css.map */

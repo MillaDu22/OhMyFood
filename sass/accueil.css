@@ -539,18 +539,23 @@ footer {
     filter: brightness(1.1);
     box-shadow: 2px 6px 10px rgba(0, 0, 1, 0.25);
   }
-  .fonctionement {
+  .fonctionnement {
     width: 100%;
     left: 0px;
+    display: flex;
+    overflow: scroll;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: scroll;
   }
   .h2fonct {
     width: 100%;
-    left: 0px;
-    text-align: center;
+    text-align: left;
+    padding-left: 63px;
   }
   .listButton {
     position: relative;
-    width: 100%;
+    width: 110%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -563,7 +568,7 @@ footer {
     justify-content: center;
   }
   .btnresto, .btnmenu, .btnmiam {
-    width: 66%;
+    width: 323px;
     display: flex;
     text-align: center;
   }
@@ -591,8 +596,8 @@ footer {
   }
   .titreresto {
     width: 100%;
-    text-align: center;
-    left: 0px;
+    text-align: left;
+    padding-left: 63px;
   }
   .columnCard {
     flex-direction: row;
@@ -601,7 +606,7 @@ footer {
     left: 0.7%;
   }
   .resto1, .resto2, .resto3, .resto4 {
-    width: 340px;
+    width: 335px;
   }
   .fa-solid.fa-heart:before {
     font-style: normal;
@@ -627,26 +632,25 @@ footer {
     width: 76%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    left: 0px;
+    justify-content: space-evenly;
     padding-left: 3%;
   }
   .lienFooter {
     position: relative;
-    width: 180px;
+    width: 208px;
     top: 90px;
   }
   .rowfooter {
-    top: 0px;
     width: 208px;
+    left: 0px;
   }
   .contact {
     width: 208px;
-    left: -15px;
+    left: 0px;
   }
   .mention {
     width: 208px;
-    left: 25px;
+    left: 0px;
   }
   .txtoficon {
     width: 208px;
@@ -655,5 +659,6 @@ footer {
   .logofooter {
     width: 90px;
     top: 72px;
+    left: 0px;
   }
 }/*# sourceMappingURL=accueil.css.map */

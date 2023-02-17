@@ -633,22 +633,14 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    padding-left: 3%;
+    padding-left: 6%;
   }
   .lienFooter {
     position: relative;
     width: 208px;
     top: 90px;
   }
-  .rowfooter {
-    width: 208px;
-    left: 0px;
-  }
-  .contact {
-    width: 208px;
-    left: 0px;
-  }
-  .mention {
+  .rowfooter, .contact, .mention {
     width: 208px;
     left: 0px;
   }

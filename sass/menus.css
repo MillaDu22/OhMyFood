@@ -8,6 +8,7 @@ body {
 }
 
 header {
+  box-sizing: border-box;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -28,6 +29,7 @@ header {
 }
 
 .logotitle {
+  box-sizing: border-box;
   width: 100%;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
   display: flex;
@@ -48,13 +50,16 @@ h1 {
 }
 
 .imgHeader {
+  box-sizing: border-box;
   position: relative;
+  margin: 0;
   width: 100%;
   height: 275px;
   overflow: hidden;
 }
 
 .imgmenu {
+  box-sizing: border-box;
   position: relative;
   width: 100%;
   height: 275px;
@@ -71,12 +76,14 @@ h1 {
   justify-content: space-between;
   position: absolute;
   top: 283px;
+  left: 0px;
   width: 100%;
   height: 1170px;
   background: #F7F7F7;
   border-radius: 30px 30px 0px 0px;
   z-index: 2;
   padding-bottom: 102px;
+  overflow: hidden;
 }
 
 .listMenu {
@@ -86,12 +93,15 @@ h1 {
   justify-content: space-between;
   position: absolute;
   top: 283px;
+  box-sizing: border-box;
   width: 100%;
-  height: 1209px;
+  left: 0;
+  height: 1262px;
   background: #F7F7F7;
   border-radius: 30px 30px 0px 0px;
   z-index: 2;
   padding-bottom: 52px;
+  overflow: hidden;
 }
 
 .rowTitle {
@@ -99,7 +109,7 @@ h1 {
   left: 17px;
   display: flex;
   flex-direction: row;
-  width: 93%;
+  width: 92%;
 }
 
 h2 {
@@ -140,30 +150,37 @@ h2 {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 99%;
   height: 400px;
+  overflow: hidden;
 }
 
 .entrees, .plats, .desserts {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 99%;
   height: 330px;
+  overflow: hidden;
 }
 
 .bigUlentrees {
+  width: 87%;
   position: relative;
   height: 400.07px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  align-items: center;
+  overflow: hidden;
 }
 
 .ulplats, .uldesserts, .smallUlentrees {
+  width: 87%;
   height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  align-items: center;
 }
 
 .lientrees, .liplats, .lidesserts {
@@ -181,7 +198,7 @@ h2 {
   border-radius: 15px;
   padding: 12px 5px 12px 5px;
   list-style: none;
-  left: -30px;
+  left: -20px;
   overflow: hidden;
 }
 
@@ -312,7 +329,7 @@ p {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   border-radius: 25px;
   position: relative;
-  top: 25px;
+  top: 18px;
   bottom: 20px;
   padding: 13px 48px 13px 48px;
   border: none;
@@ -325,10 +342,12 @@ p {
 }
 
 footer {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   position: absolute;
   top: 1545px;
+  left: 0;
   height: 197px;
   padding-bottom: 20px;
   width: 100%;
@@ -446,7 +465,7 @@ footer {
     top: 398px;
     left: 13.4%;
     width: 73.26%;
-    height: 1397px;
+    height: 1498px;
     padding-bottom: 100px;
   }
   h2 {

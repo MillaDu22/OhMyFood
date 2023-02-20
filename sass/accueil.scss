@@ -300,7 +300,7 @@
     .fa-heart:active{
         font-weight:bold;
         background:  -webkit-linear-gradient(#FF79DA, #9356DC);
-        -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
         cursor:pointer;
     }
@@ -536,7 +536,7 @@
     .fa-heart:hover{
         font-weight:bold;
         background:  -webkit-linear-gradient(#FF79DA, #9356DC);
-        -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
         cursor:pointer;
     }

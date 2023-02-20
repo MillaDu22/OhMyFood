@@ -108,8 +108,8 @@ h2{
 }
 .fa-heart:active{
     font-weight:bold;
-    background:-webkit-linear-gradient(#FF79DA, #450691);
-    -webkit-background-clip: text;
+    background:-webkit-linear-gradient(#FF79DA, #450691,#1b0239);
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     cursor:pointer;
 }
@@ -209,9 +209,8 @@ h2{
     border-radius:0 15px 15px 0;
 }
 
-    .fa-solid.fa-circle-check {
-    position:relative;
-    left:17px;
+.fa-solid.fa-circle-check {
+    position:absolute;
     top:25px;
     color:$colour-white;
     font-size: 20px;
@@ -219,16 +218,25 @@ h2{
 
 .lidesserts:active, .liplats:active, .lientrees:active {
     .fa-circle-check {
-        transform: rotate(360%) 1S linear;
+        animation:tick 0.3S  linear forwards;
     } 
+    @keyframes tick {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }   
+    }
     .boxcheck{
-        width:59px;
+        width:20%;
+        display: flex;
+        justify-content: center;
     }
     .tarif {
         left:0;
     }
 }
-
 .titreentrees, .titreplats, .titredesserts {
     position:relative;
     left:15px;
@@ -422,8 +430,8 @@ footer {
     }
     .fa-regular.fa-heart:hover{
         font-weight:bold;
-        background:-webkit-linear-gradient(#FF79DA, #450691);
-        -webkit-background-clip: text;
+        background:-webkit-linear-gradient(#FF79DA, #450691, #1b0239);
+        background-clip: text;
         -webkit-text-fill-color: transparent;
         cursor:pointer;
     }
@@ -456,9 +464,16 @@ footer {
 
     .lidesserts:hover, .liplats:hover, .lientrees:hover {
         .fa-circle-check {
-            transform: rotate(360%) 1S linear;
-            left:0;
+            animation:tick 0.3S  linear forwards;
         } 
+        @keyframes tick {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
         .boxcheck{
             width:20%;
             display:flex;

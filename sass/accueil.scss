@@ -2,11 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
-
     body {
-        width:375px;
+        width:100%;
         margin: 0 auto;
         padding:0 auto;
+    }
+    .loader {
+        display:none;
     }
     header {
         width:100%;
@@ -31,7 +33,7 @@
         position:relative;
         z-index: 2;
         top:27px;
-        left:120px;
+        left:30%;
         color:$colour-footer;
     }
     .localisation {
@@ -98,7 +100,7 @@
     }
     .h2fonct {
         position:relative;
-        width:275px;
+        width:200px;
         left:20px;
         font-family: $familytext;
         font-weight:700;
@@ -116,36 +118,38 @@
     }
     .listButton {
         position:relative;
-        left:25px;
         display:flex;
         flex-direction:column;
-        justify-content: space-between;
-        width:90%;
+        align-items: center;
+        width:100%;
     }
     .rowbutton{
+        width:99%;
         display:flex;
         flex-direction: row;
+        justify-content: center;
+        padding-top:25px;
     }
     .fa-circle{
         position:relative;
-        left:-8px;
-        top:48px;
+        left:19px;
+        top:25px;
         z-index: 1;
         font-size: 22px;
         color:$colour-primary;
     }
     .fa-1, .fa-2 {
         position:relative;
-        left:-26px;
-        top:44px;
+        left:3px;
+        top:29px;
         z-index: 2;
         color:$colour-white;
         font-size:11px;
     }
     .fa-3 {
         position:relative;
-        left:-28px;
-        top:44px;
+        left:2px;
+        top:31px;
         z-index: 2;
         color:$colour-white;
         font-size:11px;
@@ -153,8 +157,9 @@
     .btnresto, .btnmenu, .btnmiam{
         display:flex;
         flex-direction: row;
+        justify-content:center;
         position:relative;
-        width:320.49px;
+        width:322px;
         height:72.38px;
         background:$colour-lightgrey;
         box-shadow:0px 4px 15px rgba(0, 0, 0, 0.15);
@@ -164,8 +169,7 @@
     }
     .iconphone, .iconlist, .iconstore {
         position: relative;
-        right:36px;
-        left:35.49px;
+        left:-30px;
         color:#7E7E7E;
     }
     .iconphone{
@@ -179,7 +183,7 @@
     }
     .txtbtn{
         position: relative;
-        left:53.49px;
+        /*left:30.49px;*/
         font-family: $familytext;
         color:$colour-black;
         font-weight: 500;
@@ -204,14 +208,14 @@
     .columnCard {
         width:91%;
         position: relative;
-        left:17.04px;
+        margin:0 auto;
         display: flex;
         flex-direction: column;
         justify-content:space-between;
     }
 
     .titreresto {
-        width:90%;
+        width:200px;
         position:relative;
         left:20px;
         font-family: $familytext;
@@ -242,7 +246,7 @@
     }
     .new {
         position:absolute;
-        left:246.31px;
+        right:10px;
         top:14.6px;
         width:75.37px;
         height:16px;
@@ -268,7 +272,7 @@
         position:relative;
         left:12.81px;
         top:10px;
-        width:50%;
+        width:60%;
         height:20px;
         font-family: $familytext;
         font-weight:700;
@@ -286,66 +290,49 @@
         line-height:19.92px;
         color:$colour-footer;
     }
-    .iconlike {
-        width:22px;
-        height:21px;
-        font-size: 21px;
-        position:relative;
-        left:300px;
-    }
-    .hearth2{
-        position:relative;
-        top:-27px;
-        left:13px;
-        width:22px;
-        height:21px;
-    }
     .fa-regular.fa-heart{
+        text-align: right;
         font-size: 22px;
-    }
-    .fa-solid.fa-heart:before{
-        font-style:normal;
-        color:transparent;
-        transition:color 1s ease-in-out;
-    }
-    .fa-solid:active::before{
-        color:rgb(203, 60, 242);
-        cursor:pointer;
-    }
-    .fa-solid.fa-heart{
         position:relative;
-        top:-24px;
-        font-size: 22px;
+        top:10px;
+        right:10px;
+    }
+    .fa-heart:active{
+        font-weight:bold;
+        background:  -webkit-linear-gradient(#FF79DA, #9356DC);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        cursor:pointer;
     }
     footer {
         display:flex;
         flex-direction: column;
         position: relative;
-        width:100.5%;
+        width:100%;
         box-sizing: border-box;
-        height:206px;
+        height:211px;
         color:$colour-white;
         background: $colour-footer;
     }
     .logofooter {
-        width:70%;
+        width:83%;
         height:27px;
-        position:relative;
         font-family:$familylogotitre;
         font-weight:400;
         font-size:18px;
         line-height:26px;
-        top:0px;
-        left:25px;
+        padding-left:25px;
     }
     .article {
         display:flex;
         flex-direction: column;
         justify-content: space-between;
+        align-items: center;
         position:relative;
-        width:80%;
+        width:99%;
     }
     .lienFooter {
+        width:100%;
         text-decoration: none;
         color:$colour-white;
         height:20px;
@@ -361,10 +348,10 @@
         position:relative;
         display:flex;
         flex-direction: row;
-        width:70%;
+        width:88%;
         height:19px;
         font-size: 16px;
-        left:25px;
+        padding-left:25px;
     }
     .txtoficon {
         position: relative;
@@ -379,35 +366,25 @@
     }
     .mention, .contact {
         height:20px;
-        width:70%;
+        width:75%;
         position:relative;
         color:$colour-white;
         font-family: $familytext;
         font-size: 16px;
         font-weight: 500;
         line-height: 19px;
-        left:25px;
+        padding-left:25px;
     }
-    .mention {
+    .mention, .contact {
         top:-35px;
     }
-    .contact{
-        top:-35px;
-    }
-
     @media screen and (min-width: 769px) {
     body {
         width:100%;
     }
-    .rowloader {
-        display:flex;
-        flex-direction:row;
-        position:relative;
-        height:100%;
-        width:100%;
-    }
     .loader {
-        margin:0 auto;
+        display: block;
+        margin:0;
         padding:0 auto;
         position: fixed;
         background:$colour-lightgrey;
@@ -416,18 +393,14 @@
         z-index: 2;
         width: 100%;
         height:100%;
-        top:0px;
-        right:0px;
-        bottom:0px;
-        left:0px;
         animation:loader 1s 2s forwards;
     }
-    .load{
+    .load {
         width:80px;
         height:80px;
         position: relative;
-        left:50%;
-        top:50vh;
+        left:47.5%;
+        top:44vh;
     }
     .load div {
         position: absolute;
@@ -495,27 +468,25 @@
         width:100%;
         left:0px;
         display: flex;
-        overflow: scroll;
         flex-direction:row;
         flex-wrap: wrap;
-        overflow: scroll;
     }
     .h2fonct{
-        width:100%;
         text-align: left;
         padding-left:63px;
     }
     .listButton {
         position: relative;
-        width:110%;
+        width:100%;
         display:flex;
         flex-direction:row;
-        justify-content: space-around;
+        justify-content: space-between;
         padding-bottom:20px;
         left:0px;
     }
-    .row {
-        width:100%;
+    .rowbutton {
+        padding:0;
+        width:32%;
         display: flex;
         justify-content: center;
     }
@@ -523,17 +494,22 @@
         width:323px;
         display: flex;
         text-align: center;
+        justify-content: center;
+        left:-10px;
     }
     .fa-circle {
         top:28px;
-        left:20px;
+        left:10px;
     }
     .fa-3, .fa-2, .fa-1 {
         top:33px;
-        left:4px;
+        left:-3px;
     }
     .txtbtn {
-        width:62%;
+        width:88%;
+    }
+    .iconphone, .iconlist, .iconstore {
+        left:9px;
     }
     .btnresto:hover, .btnmenu:hover, .btnmiam:hover{
         box-shadow:4px 8px 15px rgba(0, 0, 1, 0.15);
@@ -544,36 +520,31 @@
     }
     .restaurants {
         width:100%;
-        overflow: scroll;
     }
     .titreresto{
-        width:100%;
         text-align: left;
         padding-left:63px;
     }
     .columnCard {
         flex-direction: row;
-        justify-content: space-evenly;
-        width:110%;
-        left:0.7%;
+        justify-content: space-between;
+        width:93%;
     }
     .resto1, .resto2, .resto3, .resto4 {
-            width:335px;
+        width:24%;
     }
-    .fa-solid.fa-heart:before{
-        font-style:normal;
-        color:transparent;
-        transition:color 1s ease-in-out;
-    }
-    .fa-solid:hover::before{
-        color:rgb(203, 60, 242);
+    .fa-heart:hover{
+        font-weight:bold;
+        background:  -webkit-linear-gradient(#FF79DA, #9356DC);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
         cursor:pointer;
     }
     .titleCard{
-        width:90%;
+        width:98%;
     }
     .txtCard {
-        width:90%;
+        width:98%;
     }
     footer {
         flex-direction: row-reverse;
@@ -581,19 +552,18 @@
         width:100%;
     }
     .article {
-        width:76%;
+        width:68%;
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
-        padding-left:6%;
+        justify-content: space-between;
+        padding-left:7%;
     }
     .lienFooter{
         position:relative;
-        width:208px;
-        top:90px;
+        width:20%;
     }
     .rowfooter, .contact, .mention {
-        width:208px;
+        width:100%;
         left:0px;
     }
     .txtoficon {
@@ -601,9 +571,9 @@
         top:-35px;
     }
     .logofooter{
+        position: relative;
         width:90px;
-        top:72px;
-        left:0px;
+        top:75px;
     }
 }
 

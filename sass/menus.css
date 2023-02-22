@@ -4,7 +4,7 @@
 body {
   width: 100%;
   margin: 0;
-  padding: 0 auto;
+  padding: 0;
 }
 
 header {
@@ -70,7 +70,7 @@ h1 {
 }
 
 .listMenu3 {
-  padding: 0px auto;
+  padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -87,7 +87,7 @@ h1 {
 }
 
 .listMenu {
-  padding: 0px auto;
+  padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -430,7 +430,7 @@ footer {
   body {
     width: 100%;
     margin: 0;
-    padding: 0 auto;
+    padding: 0;
   }
   .logotitle {
     width: 100%;
@@ -469,7 +469,6 @@ footer {
   h2 {
     text-align: center;
     width: 100%;
-    padding-left: auto;
   }
   .rowTitle {
     display: flex;

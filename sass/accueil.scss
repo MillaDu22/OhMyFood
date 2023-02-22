@@ -5,7 +5,7 @@
     body {
         width:100%;
         margin: 0 auto;
-        padding:0 auto;
+        padding:0;
     }
     .loader {
         display:none;
@@ -383,7 +383,7 @@
     .loader {
         display: block;
         margin:0;
-        padding:0 auto;
+        padding:0;
         position: fixed;
         background:$colour-lightgrey;
         opacity:0.8;

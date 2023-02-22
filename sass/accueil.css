@@ -5,7 +5,7 @@
 body {
   width: 100%;
   margin: 0 auto;
-  padding: 0 auto;
+  padding: 0;
 }
 
 .loader {
@@ -429,7 +429,7 @@ footer {
   .loader {
     display: block;
     margin: 0;
-    padding: 0 auto;
+    padding: 0;
     position: fixed;
     background: #F7F7F7;
     opacity: 0.8;

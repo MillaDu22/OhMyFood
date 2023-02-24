@@ -123,7 +123,9 @@ h2 {
 }
 
 .fa-heart {
+  width: 22px;
   height: 20px;
+  padding-left: 1px;
   position: relative;
   font-size: 22px;
   top: 32px;
@@ -279,19 +281,22 @@ h2 {
     transform: rotate(360deg);
   }
 }
-@keyframes check {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 20%;
-  }
-}
 .lidesserts:hover .boxcheck, .liplats:hover .boxcheck, .lientrees:hover .boxcheck {
   animation: ckeck 0.7s linear forwards;
   width: 20%;
   display: flex;
   justify-content: center;
+}
+@keyframes check {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 10%;
+  }
+  100% {
+    width: 20%;
+  }
 }
 .lidesserts:hover .h4entrees, .lidesserts:hover .h4plats, .lidesserts:hover .h4desserts, .lidesserts:hover p, .liplats:hover .h4entrees, .liplats:hover .h4plats, .liplats:hover .h4desserts, .liplats:hover p, .lientrees:hover .h4entrees, .lientrees:hover .h4plats, .lientrees:hover .h4desserts, .lientrees:hover p {
   width: 90%;

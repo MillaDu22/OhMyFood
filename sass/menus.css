@@ -123,14 +123,15 @@ h2 {
 }
 
 .fa-heart {
+  height: 20px;
   position: relative;
   font-size: 22px;
   top: 32px;
 }
 
-.fa-heart:active {
+.fa-heart:hover {
   font-weight: bold;
-  background: -webkit-linear-gradient(#FF79DA, #450691, #1b0239);
+  background: -webkit-linear-gradient(#FF79DA, #450691);
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -206,6 +207,13 @@ h2 {
   flex-direction: column;
 }
 
+.h4entrees, .h4plats, .h4desserts, p {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .tarif {
   width: 12%;
   left: 25px;
@@ -240,7 +248,6 @@ h2 {
   }
 }
 .boxcheck {
-  width: 0px;
   position: relative;
   height: 71px;
   left: 5px;
@@ -255,8 +262,14 @@ h2 {
   font-size: 20px;
 }
 
-.lidesserts:active .fa-circle-check, .liplats:active .fa-circle-check, .lientrees:active .fa-circle-check {
-  animation: tick 0.3S linear forwards;
+.boxcheck {
+  width: 0%;
+  display: flex;
+  justify-content: center;
+}
+
+.lidesserts:hover .fa-circle-check, .liplats:hover .fa-circle-check, .lientrees:hover .fa-circle-check {
+  animation: tick 0.7s linear forwards;
 }
 @keyframes tick {
   0% {
@@ -266,12 +279,24 @@ h2 {
     transform: rotate(360deg);
   }
 }
-.lidesserts:active .boxcheck, .liplats:active .boxcheck, .lientrees:active .boxcheck {
+@keyframes check {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 20%;
+  }
+}
+.lidesserts:hover .boxcheck, .liplats:hover .boxcheck, .lientrees:hover .boxcheck {
+  animation: ckeck 0.7s linear forwards;
   width: 20%;
   display: flex;
   justify-content: center;
 }
-.lidesserts:active .tarif, .liplats:active .tarif, .lientrees:active .tarif {
+.lidesserts:hover .h4entrees, .lidesserts:hover .h4plats, .lidesserts:hover .h4desserts, .lidesserts:hover p, .liplats:hover .h4entrees, .liplats:hover .h4plats, .liplats:hover .h4desserts, .liplats:hover p, .lientrees:hover .h4entrees, .lientrees:hover .h4plats, .lientrees:hover .h4desserts, .lientrees:hover p {
+  width: 90%;
+}
+.lidesserts:hover .tarif, .liplats:hover .tarif, .lientrees:hover .tarif {
   left: 0;
 }
 
@@ -289,7 +314,6 @@ h2 {
 }
 
 .h4desserts, .h4plats, .h4entrees {
-  width: 98%;
   position: relative;
   top: 15px;
   left: 5px;
@@ -301,7 +325,6 @@ h2 {
 }
 
 p {
-  width: 98%;
   position: relative;
   top: -25px;
   left: 5px;
@@ -333,7 +356,7 @@ p {
   border: none;
 }
 
-.btncommand:active {
+.btncommand:hover {
   background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
   filter: brightness(1.1);
   box-shadow: 2px 6px 15px rgba(0, 0, 2, 0.45);
@@ -479,7 +502,7 @@ footer {
   }
   .fa-regular.fa-heart:hover {
     font-weight: bold;
-    background: -webkit-linear-gradient(#FF79DA, #450691, #1b0239);
+    background: -webkit-linear-gradient(#FF79DA, #450691);
     -webkit-background-clip: text;
             background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -513,8 +536,13 @@ footer {
     width: 100%;
     left: -40px;
   }
+  .boxcheck {
+    width: 0%;
+    display: flex;
+    justify-content: center;
+  }
   .lidesserts:hover .fa-circle-check, .liplats:hover .fa-circle-check, .lientrees:hover .fa-circle-check {
-    animation: tick 0.3S linear forwards;
+    animation: tick 0.7s linear forwards;
   }
   @keyframes tick {
     0% {
@@ -525,12 +553,21 @@ footer {
     }
   }
   .lidesserts:hover .boxcheck, .liplats:hover .boxcheck, .lientrees:hover .boxcheck {
-    width: 20%;
-    display: flex;
-    justify-content: center;
+    animation: ckeck 0.7s linear forwards;
+  }
+  @keyframes check {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 20%;
+    }
   }
   .lidesserts:hover .tarif, .liplats:hover .tarif, .lientrees:hover .tarif {
     left: 0;
+  }
+  .lidesserts:hover .h4entrees, .lidesserts:hover .h4plats, .lidesserts:hover .h4desserts, .lidesserts:hover p, .liplats:hover .h4entrees, .liplats:hover .h4plats, .liplats:hover .h4desserts, .liplats:hover p, .lientrees:hover .h4entrees, .lientrees:hover .h4plats, .lientrees:hover .h4desserts, .lientrees:hover p {
+    width: 90%;
   }
   .h4desserts, .h4plats, .h4entrees {
     position: relative;
@@ -538,7 +575,6 @@ footer {
     left: 5px;
   }
   p {
-    width: 80%;
     top: -20px;
     left: 5px;
   }

@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;1,400&family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;1,400&display=swap');
-
 body {
     width:100%;
     margin:0;
@@ -112,13 +111,14 @@ h2{
     font-weight:400;
 }
 .fa-heart{
+    height: 20px;
     position:relative;
     font-size: 22px;
     top:32px;
 }
-.fa-heart:active{
+.fa-heart:hover{
     font-weight:bold;
-    background:-webkit-linear-gradient(#FF79DA, #450691,#1b0239);
+    background:-webkit-linear-gradient(#FF79DA, #450691);
     background-clip: text;
     -webkit-text-fill-color: transparent;
     cursor:pointer;
@@ -186,6 +186,12 @@ h2{
     display:flex;
     flex-direction:column;
 }
+.h4entrees, .h4plats, .h4desserts, p {
+    max-width: 100%;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    white-space:nowrap;
+}
 .tarif {
     width:12%;
     left:25px;
@@ -216,7 +222,6 @@ h2{
     }
 }
 .boxcheck{
-    width:0px;
     position:relative;
     height:71px;
     left:5px;
@@ -230,10 +235,15 @@ h2{
     color:$colour-white;
     font-size: 20px;
 }
+.boxcheck {
+    width:0%;
+    display: flex;
+    justify-content: center;
+}
 
-.lidesserts:active, .liplats:active, .lientrees:active {
+.lidesserts:hover, .liplats:hover, .lientrees:hover {
     .fa-circle-check {
-        animation:tick 0.3S  linear forwards;
+        animation:tick 0.7s linear forwards;
     } 
     @keyframes tick {
         0% {
@@ -243,10 +253,22 @@ h2{
             transform: rotate(360deg);
         }   
     }
+    @keyframes check {
+        0%{
+            width:0%;
+        }
+        100% {
+            width:20%;
+        }
+    }
     .boxcheck{
+        animation:ckeck 0.7s linear forwards;
         width:20%;
         display: flex;
         justify-content: center;
+    }
+    .h4entrees, .h4plats, .h4desserts, p {
+        width:90%;
     }
     .tarif {
         left:0;
@@ -265,7 +287,6 @@ h2{
     color:$colour-black;
 }
 .h4desserts, .h4plats, .h4entrees {
-    width:98%;
     position:relative;
     top:15px;
     left:5px;
@@ -275,9 +296,7 @@ h2{
     font-size: 18px;
     line-height: 21px;
 }
-
 p {
-    width:98%;
     position:relative;
     top:-25px;
     left:5px;
@@ -308,7 +327,7 @@ p {
     padding:13px 48px 13px 48px;
     border:none
 }
-.btncommand:active{
+.btncommand:hover{
     background:$colour-fondpurple;
     filter:brightness(1.1);
     box-shadow:2px 6px 15px rgba(0, 0, 2, 0.45);
@@ -446,7 +465,7 @@ footer {
     }
     .fa-regular.fa-heart:hover{
         font-weight:bold;
-        background:-webkit-linear-gradient(#FF79DA, #450691, #1b0239);
+        background:-webkit-linear-gradient(#FF79DA, #450691);
         background-clip: text;
         -webkit-text-fill-color: transparent;
         cursor:pointer;
@@ -479,10 +498,14 @@ footer {
         width:100%;
         left:-40px;
     }
-
+    .boxcheck {
+        width:0%;
+        display:flex;
+        justify-content: center;
+    }
     .lidesserts:hover, .liplats:hover, .lientrees:hover {
         .fa-circle-check {
-            animation:tick 0.3S  linear forwards;
+            animation:tick 0.7s linear forwards;
         } 
         @keyframes tick {
             0% {
@@ -493,12 +516,21 @@ footer {
             }
         }
         .boxcheck{
-            width:20%;
-            display:flex;
-            justify-content: center;
+            animation:ckeck 0.7s linear forwards;
+        }
+        @keyframes check {
+            0%{
+                width:0%;
+            }
+            100% {
+                width:20%;
+            }
         }
         .tarif {
             left:0;
+        }
+        .h4entrees, .h4plats, .h4desserts, p {
+            width:90%;
         }
     }
     .h4desserts, .h4plats, .h4entrees {
@@ -507,7 +539,6 @@ footer {
         left:5px;
     }
     p {
-        width:80%;
         top:-20px;
         left:5px;
     }

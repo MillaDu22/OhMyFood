@@ -9,9 +9,82 @@ body {
 }
 
 .loader {
-  display: none;
+  display: block;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  background: #F7F7F7;
+  opacity: 0.8;
+  inset: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  animation: loader 1s 2s forwards;
 }
 
+.load {
+  display: block;
+  width: 80px;
+  height: 80px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  top: 44vh;
+}
+
+.load div {
+  position: absolute;
+  border-top: 3px solid purple;
+  border-bottom: 3px solid purple;
+  border-left: 1px solid #000000;
+  border-right: 1px solid #000000;
+  opacity: 1;
+  border-radius: 50%;
+  animation: load 2.5s cubic-bezier(0, 0.2, 0.8, 1) forwards;
+}
+
+.load div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+
+@keyframes load {
+  0% {
+    top: 18px;
+    left: 18px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  4% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  5% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
+}
+@keyframes loader {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
 header {
   width: 100%;
   display: flex;
@@ -103,7 +176,7 @@ form {
   border: none;
 }
 
-.btnexplore:active {
+.btnexplore:hover {
   background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
   filter: brightness(1.1);
   box-shadow: 2px 6px 10px rgba(0, 0, 1, 0.25);
@@ -214,11 +287,11 @@ form {
   font-size: 16px;
 }
 
-.btnresto:active, .btnmenu:active, .btnmiam:active {
+.btnresto:hover, .btnmenu:hover, .btnmiam:hover {
   box-shadow: 2px 6px 15px rgba(0, 0, 2, 0.15);
   background-color: #F5EDFF;
 }
-.btnresto:active .iconphone, .btnresto:active .iconlist, .btnresto:active .iconstore, .btnmenu:active .iconphone, .btnmenu:active .iconlist, .btnmenu:active .iconstore, .btnmiam:active .iconphone, .btnmiam:active .iconlist, .btnmiam:active .iconstore {
+.btnresto:hover .iconphone, .btnresto:hover .iconlist, .btnresto:hover .iconstore, .btnmenu:hover .iconphone, .btnmenu:hover .iconlist, .btnmenu:hover .iconstore, .btnmiam:hover .iconphone, .btnmiam:hover .iconlist, .btnmiam:hover .iconstore {
   color: #9356DC;
 }
 
@@ -321,15 +394,21 @@ form {
   color: #353535;
 }
 
-.fa-regular.fa-heart {
-  text-align: right;
-  font-size: 22px;
+.like {
+  display: flex;
+  justify-content: flex-end;
   position: relative;
   top: 10px;
+}
+
+.fa-regular.fa-heart {
+  width: 22px;
+  font-size: 22px;
+  position: relative;
   right: 10px;
 }
 
-.fa-heart:active {
+.fa-heart:hover {
   font-weight: bold;
   background: -webkit-linear-gradient(#FF79DA, #9356DC);
   -webkit-background-clip: text;
@@ -443,7 +522,8 @@ footer {
     width: 80px;
     height: 80px;
     position: relative;
-    left: 47.5%;
+    margin-left: auto;
+    margin-right: auto;
     top: 44vh;
   }
   .load div {

@@ -8,7 +8,77 @@
         padding:0;
     }
     .loader {
-        display:none;
+        display: block;
+        margin:0;
+        padding:0;
+        position: fixed;
+        background:$colour-lightgrey;
+        opacity:0.8;
+        inset:0;
+        z-index: 2;
+        width: 100%;
+        height:100%;
+        animation:loader 1s 2s forwards;
+    }
+    .load {
+        display:block;
+        width:80px;
+        height:80px;
+        position: relative;
+        margin-left:auto;
+        margin-right:auto;
+        top:44vh;
+    }
+    .load div {
+        position: absolute;
+        border-top: 3px solid purple;
+        border-bottom: 3px solid purple;
+        border-left: 1px solid $colour-black;
+        border-right: 1px solid $colour-black;
+        opacity: 1;
+        border-radius: 50%;
+        animation: load 2.5s cubic-bezier(0, 0.2, 0.8, 1) forwards;
+    }
+    .load div:nth-child(2) {
+        animation-delay: -0.5s;
+    }
+    @keyframes load {
+        0% {
+            top: 18px;
+            left: 18px;
+            width: 0;
+            height: 0;
+            opacity: 0;
+        }
+        4% {
+            top: 36px;
+            left: 36px;
+            width: 0;
+            height: 0;
+            opacity: 0;
+        }
+        5% {
+            top: 36px;
+            left: 36px;
+            width: 0;
+            height: 0;
+            opacity: 1;
+        }
+        100% {
+            top: 0px;
+            left: 0px;
+            width: 72px;
+            height: 72px;
+            opacity: 0;
+        }
+    }
+    @keyframes loader {
+        0% {
+            transform:scale(1);
+        }
+        100% {
+                transform:scale(0);
+        }
     }
     header {
         width:100%;
@@ -93,7 +163,7 @@
         padding:15px 20.75px 15px 20.75px;
         border:none;
     }
-    .btnexplore:active{
+    .btnexplore:hover{
         background:$colour-fondpurple;
         filter:brightness(1.1);
         box-shadow:2px 6px 10px rgba(0, 0, 1, 0.25);
@@ -190,7 +260,7 @@
         line-height: 19px;
         font-size: 16px;
     }
-    .btnresto:active, .btnmenu:active, .btnmiam:active {
+    .btnresto:hover, .btnmenu:hover, .btnmiam:hover {
         box-shadow:2px 6px 15px rgba(0, 0, 2, 0.15);
         background-color: #F5EDFF;
             .iconphone, .iconlist, .iconstore {
@@ -288,14 +358,19 @@
         line-height:19.92px;
         color:$colour-footer;
     }
-    .fa-regular.fa-heart{
-        text-align: right;
-        font-size: 22px;
+    .like {
+        display:flex;
+        justify-content: flex-end;
         position:relative;
         top:10px;
+    }
+    .fa-regular.fa-heart{
+        width:22px;
+        font-size: 22px;
+        position:relative;
         right:10px;
     }
-    .fa-heart:active{
+    .fa-heart:hover{
         font-weight:bold;
         background:  -webkit-linear-gradient(#FF79DA, #9356DC);
         background-clip: text;
@@ -397,7 +472,8 @@
         width:80px;
         height:80px;
         position: relative;
-        left:47.5%;
+        margin-left:auto;
+        margin-right:auto;
         top:44vh;
     }
     .load div {

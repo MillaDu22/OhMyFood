@@ -245,7 +245,7 @@ h2{
 
 .lidesserts:hover, .liplats:hover, .lientrees:hover {
     .fa-circle-check {
-        animation: tick 0.7s linear forwards;
+        animation: tick 0.6s linear forwards;
     } 
     @keyframes tick {
         0% {
@@ -256,27 +256,17 @@ h2{
         }   
     }
     .boxcheck {
-        animation: ckeck 0.7s linear forwards;
         width:20%;
         display: flex;
         justify-content: center;
-    }
-    @keyframes check {
-        0% {
-            width:0%;
-        }
-        50% {
-            width:10%;
-        }
-        100% {
-            width:20%;
-        }
+        transition-delay:0.4s;
     }
     .h4entrees, .h4plats, .h4desserts, p {
         width:90%;
     }
     .tarif {
         left:0;
+        transition-delay:0.4s;
     }
 }
 .titreentrees, .titreplats, .titredesserts {
@@ -510,7 +500,7 @@ footer {
     }
     .lidesserts:hover, .liplats:hover, .lientrees:hover {
         .fa-circle-check {
-            animation:tick 0.7s linear forwards;
+            animation:tick 0.6s linear forwards;
         } 
         @keyframes tick {
             0% {
@@ -521,18 +511,12 @@ footer {
             }
         }
         .boxcheck{
-            animation:ckeck 0.7s linear forwards;
-        }
-        @keyframes check {
-            0%{
-                width:0%;
-            }
-            100% {
-                width:20%;
-            }
+            transition-delay:0.4s;
+            width:20%;
         }
         .tarif {
             left:0;
+            transition-delay:0.4s;
         }
         .h4entrees, .h4plats, .h4desserts, p {
             width:90%;

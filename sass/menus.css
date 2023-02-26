@@ -271,7 +271,7 @@ h2 {
 }
 
 .lidesserts:hover .fa-circle-check, .liplats:hover .fa-circle-check, .lientrees:hover .fa-circle-check {
-  animation: tick 0.7s linear forwards;
+  animation: tick 0.6s linear forwards;
 }
 @keyframes tick {
   0% {
@@ -282,27 +282,17 @@ h2 {
   }
 }
 .lidesserts:hover .boxcheck, .liplats:hover .boxcheck, .lientrees:hover .boxcheck {
-  animation: ckeck 0.7s linear forwards;
   width: 20%;
   display: flex;
   justify-content: center;
-}
-@keyframes check {
-  0% {
-    width: 0%;
-  }
-  50% {
-    width: 10%;
-  }
-  100% {
-    width: 20%;
-  }
+  transition-delay: 0.4s;
 }
 .lidesserts:hover .h4entrees, .lidesserts:hover .h4plats, .lidesserts:hover .h4desserts, .lidesserts:hover p, .liplats:hover .h4entrees, .liplats:hover .h4plats, .liplats:hover .h4desserts, .liplats:hover p, .lientrees:hover .h4entrees, .lientrees:hover .h4plats, .lientrees:hover .h4desserts, .lientrees:hover p {
   width: 90%;
 }
 .lidesserts:hover .tarif, .liplats:hover .tarif, .lientrees:hover .tarif {
   left: 0;
+  transition-delay: 0.4s;
 }
 
 .titreentrees, .titreplats, .titredesserts {
@@ -547,7 +537,7 @@ footer {
     justify-content: center;
   }
   .lidesserts:hover .fa-circle-check, .liplats:hover .fa-circle-check, .lientrees:hover .fa-circle-check {
-    animation: tick 0.7s linear forwards;
+    animation: tick 0.6s linear forwards;
   }
   @keyframes tick {
     0% {
@@ -558,18 +548,12 @@ footer {
     }
   }
   .lidesserts:hover .boxcheck, .liplats:hover .boxcheck, .lientrees:hover .boxcheck {
-    animation: ckeck 0.7s linear forwards;
-  }
-  @keyframes check {
-    0% {
-      width: 0%;
-    }
-    100% {
-      width: 20%;
-    }
+    transition-delay: 0.4s;
+    width: 20%;
   }
   .lidesserts:hover .tarif, .liplats:hover .tarif, .lientrees:hover .tarif {
     left: 0;
+    transition-delay: 0.4s;
   }
   .lidesserts:hover .h4entrees, .lidesserts:hover .h4plats, .lidesserts:hover .h4desserts, .lidesserts:hover p, .liplats:hover .h4entrees, .liplats:hover .h4plats, .liplats:hover .h4desserts, .liplats:hover p, .lientrees:hover .h4entrees, .lientrees:hover .h4plats, .lientrees:hover .h4desserts, .lientrees:hover p {
     width: 90%;
